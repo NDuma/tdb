@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'techdb-admin',
+    podModulePrefix: 'techdb-admin/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
