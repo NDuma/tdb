@@ -1,5 +1,10 @@
 <h1>TechDB Admin</h1>
 <ul>
-  <li>{{#link-to 'register'}}Register{{/link-to}}</li>
+  {{#if session.isAuthenticated}}
+    <li><a {{ action 'invalidateSession' }}>Logout</a></li>
+  {{else}}
+    <li>{{#link-to 'register'}}Register{{/link-to}}</li>
+    <li>{{#link-to 'signin'}}Sign in{{/link-to}}</li>
+  {{/if}}
 </ul>
 {{outlet}}
