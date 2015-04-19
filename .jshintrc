@@ -4,6 +4,9 @@
     "window",
     "-Promise"
   ],
+  "camelcase": true,
+  "latedef": "nofunc",
+  "asi": true,
   "browser": true,
   "boss": true,
   "curly": true,
@@ -16,7 +19,7 @@
   "laxbreak": false,
   "newcap": true,
   "noarg": true,
-  "noempty": false,
+  "noempty": true,
   "nonew": false,
   "nomen": false,
   "onevar": false,
