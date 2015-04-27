@@ -1,0 +1,29 @@
+<h3>{{model.name}} ({{model.readiness}})</h3>
+{{model.image}}
+<h4>Summary</h4>
+{{model.summary}}
+<h4>Description</h4>
+{{model.description}}
+<h4>Impact</h4>
+<ul>
+  <li>Banking: {{model.impactBanking}}</li>
+  <li>Education: {{model.impactEducation}}</li>
+  <li>Entertainment: {{model.impactEntertainment}}</li>
+  <li>Food: {{model.impactFood}}</li>
+  <li>Housing: {{model.impactHousing}}</li>
+  <li>Media: {{model.impactMedia}}</li>
+  <li>Mobile: {{model.impactMobile}}</li>
+  <li>Policy: {{model.impactPolicy}}</li>
+  <li>Retail: {{model.impactRetail}}</li>
+  <li>Robotics: {{model.impactRobotics}}</li>
+  <li>Sustainability: {{model.impactSustainability}}</li>
+  <li>Transportation: {{model.impactTransportation}}</li>
+  <li>Travel: {{model.impactTravel}}</li>
+  <li>Wellbeing: {{model.impactWellbeing}}</li>
+</ul>
+<h4>Questions</h4>
+<ul>
+  {{#each model.questions as |question|}}
+    <li>{{question}}</li>
+  {{/each}}
+</ul>
