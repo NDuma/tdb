@@ -30,18 +30,22 @@ const CustomAuthenticator = AuthenticatorBase.extend({
     return RSVP.resolve(data)
   },
   authenticate (options) {
-    if (options.user) { return RSVP.resolve(extractSessionData(options)) }
-
-    let adapter = this.container.lookup('adapter:application')
-    let url = adapter.buildURL('user')
-    let data = {
-      user: {
-        email: options.identification,
-        password: options.password
+    let authenticate
+    if (options.user) {
+      authenticate = RSVP.resolve(options)
+    } else {
+      let adapter = this.container.lookup('adapter:application')
+      let data = {
+        user: {
+          email: options.identification,
+          password: options.password
+        }
       }
+
+      authenticate = adapter.ajax(adapter.buildURL('user'), 'POST', { data })
     }
 
-    return adapter.ajax(url, 'POST', { data }).then(extractSessionData)
+    return authenticate.then(extractSessionData)
   },
   invalidate () {
     return RSVP.resolve()
