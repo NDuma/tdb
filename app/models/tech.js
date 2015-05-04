@@ -7,7 +7,7 @@ const number = DS.attr('number')
 const QUESTIONS = ['question0', 'question1', 'question2', 'question3',
   'question4', 'question5', 'question6', 'question7', 'question8', 'question9']
 
-export default DS.Model.extend({
+const Tech = DS.Model.extend({
   name: string,
   summary: string,
   description: string,
@@ -53,4 +53,8 @@ export default DS.Model.extend({
       return values
     }
   }))
-});
+})
+
+Tech.reopenClass({ QUESTIONS })
+
+export default Tech
