@@ -1,0 +1,43 @@
+<h3>{{model.name}}</h3>
+<form {{action 'save' model on='submit'}}>
+  <label>Name: {{input value=model.name}}</label>
+  <fieldset>
+    <legend>Summary</legend>
+    <label>Markdown: {{textarea value=model.summary}}</label>
+    <div>Display: {{markdown-to-html markdown=model.summary}}</div>
+  </fieldset>
+  <fieldset>
+    <legend>Description</legend>
+    <label>Markdown: {{textarea value=model.description}}</label>
+    <div>Display: {{markdown-to-html markdown=model.description}}</div>
+  </fieldset>
+  <fieldset>
+    <legend>Impact</legend>
+    <label>Banking: {{input type='number' min='1' max='5' step='1' value=model.impactBanking}}</label>
+    <label>Education: {{input type='number' min='1' max='5' step='1' value=model.impactEducation}}</label>
+    <label>Entertainment: {{input type='number' min='1' max='5' step='1' value=model.impactEntertainment}}</label>
+    <label>Food: {{input type='number' min='1' max='5' step='1' value=model.impactFood}}</label>
+    <label>Housing: {{input type='number' min='1' max='5' step='1' value=model.impactHousing}}</label>
+    <label>Media: {{input type='number' min='1' max='5' step='1' value=model.impactMedia}}</label>
+    <label>Mobile: {{input type='number' min='1' max='5' step='1' value=model.impactMobile}}</label>
+    <label>Policy: {{input type='number' min='1' max='5' step='1' value=model.impactPolicy}}</label>
+    <label>Retail: {{input type='number' min='1' max='5' step='1' value=model.impactRetail}}</label>
+    <label>Robotics: {{input type='number' min='1' max='5' step='1' value=model.impactRobotics}}</label>
+    <label>Sustainability: {{input type='number' min='1' max='5' step='1' value=model.impactSustainability}}</label>
+    <label>Transportation: {{input type='number' min='1' max='5' step='1' value=model.impactTransportation}}</label>
+    <label>Travel: {{input type='number' min='1' max='5' step='1' value=model.impactTravel}}</label>
+    <label>Wellbeing: {{input type='number' min='1' max='5' step='1' value=model.impactWellbeing}}</label>
+  </fieldset>
+  <fieldset>
+    <legend>Readiness {{currentReadiness}}</legend>
+    <label>Question 1: {{input type='number' min='1' max='5' step='1' value=model.question1}}</label>
+    <label>Question 2: {{input type='number' min='1' max='5' step='1' value=model.question2}}</label>
+    <label>Question 3: {{input type='number' min='1' max='5' step='1' value=model.question3}}</label>
+    <label>Question 4: {{input type='number' min='1' max='5' step='1' value=model.question4}}</label>
+    <label>Question 5: {{input type='number' min='1' max='5' step='1' value=model.question5}}</label>
+    <label>Question 6: {{input type='number' min='1' max='5' step='1' value=model.question6}}</label>
+    <label>Question 7: {{input type='number' min='1' max='5' step='1' value=model.question7}}</label>
+    <label>Question 8: {{input type='number' min='1' max='5' step='1' value=model.question8}}</label>
+    <label>Question 9: {{input type='number' min='1' max='5' step='1' value=model.question9}}</label>
+  </fieldset>
+</form>

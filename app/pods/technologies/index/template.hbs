@@ -10,9 +10,7 @@
       <tr>
         <td>{{#link-to 'technologies.read' tech.id}}{{tech.name}}{{/link-to}}</td>
         <td>
-          {{#each tech.questions as |question|}}
-            {{question}},
-          {{/each}}
+          {{#link-to 'technologies.edit' tech.id}}Edit{{/link-to}}
         </td>
       </tr>
     {{/each}}
