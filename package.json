@@ -1,6 +1,6 @@
 {
   "name": "techdb-admin",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "UI for admin of techDB",
   "private": true,
   "directories": {
@@ -8,8 +8,9 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember server",
     "build": "ember build",
+    "postinstall": "bower install",
+    "start": "ember server",
     "test": "ember test"
   },
   "repository": "git@github.com:envisioning/techdb-admin.git",
@@ -19,6 +20,7 @@
   "author": "Luiz Sócrate <luiz@socrate.com.br>",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.4.1",
     "broccoli-asset-rev": "^2.0.2",
     "broccoli-clean-css": "^1.0.0",
     "compute-hmean": "^1.0.0",
