@@ -15,7 +15,7 @@
   },
   "repository": "git@github.com:envisioning/techdb-admin.git",
   "engines": {
-    "node": ">= 0.12.0"
+    "node": "0.12.x"
   },
   "author": "Luiz Sócrate <luiz@socrate.com.br>",
   "license": "MIT",
