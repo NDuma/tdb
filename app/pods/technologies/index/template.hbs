@@ -10,7 +10,7 @@
       <tr>
         <td>{{#link-to 'technologies.read' tech.id}}{{tech.name}}{{/link-to}}</td>
         <td>
-          {{#link-to 'technologies.edit' tech.id tag="button" class="tiny"}}Edit{{/link-to}}
+          {{#link-to 'technologies.edit' tech.id class="button tiny"}}Edit{{/link-to}}
           <button class="tiny alert" {{action 'delete' tech}}>Delete</button>
         </td>
       </tr>
