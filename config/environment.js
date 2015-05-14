@@ -30,7 +30,8 @@ module.exports = function(environment) {
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
-    }
+    },
+    apiHost: process.env.API_HOST
   };
 
   if (environment === 'development') {
