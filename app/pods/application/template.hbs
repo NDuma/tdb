@@ -8,7 +8,13 @@
     <section class="top-bar-section">
       <ul class="right">
         {{#if session.isAuthenticated}}
-          <li>{{#link-to 'technologies'}}Technologies{{/link-to}}</li>
+          <li class="has-dropdown not-click">
+            {{#link-to 'technologies.index'}}Technologies{{/link-to}}
+            <ul class="dropdown">
+              <li>{{#link-to 'technologies.index'}}Index{{/link-to}}</li>
+              <li>{{#link-to 'technologies.create'}}Create{{/link-to}}</li>
+            </ul>
+          </li>
           <li><a {{ action 'invalidateSession' }}>Logout</a></li>
         {{else}}
           <li>{{#link-to 'register'}}Register{{/link-to}}</li>
