@@ -1,29 +1,33 @@
-<h3>{{model.name}} ({{model.readiness}})</h3>
+<h3>{{model.name}} ({{to-fixed 1 model.readiness}})</h3>
 {{model.image}}
 <h4>Summary</h4>
 {{model.summary}}
 <h4>Description</h4>
 {{model.description}}
 <h4>Impact</h4>
+<div class="row">
+  <div class="columns small-4 medium-2 left">Banking: {{model.impactBanking}}</div>
+  <div class="columns small-4 medium-2 left">Education: {{model.impactEducation}}</div>
+  <div class="columns small-4 medium-2 left">Entertainment: {{model.impactEntertainment}}</div>
+  <div class="columns small-4 medium-2 left">Food: {{model.impactFood}}</div>
+  <div class="columns small-4 medium-2 left">Housing: {{model.impactHousing}}</div>
+  <div class="columns small-4 medium-2 left">Media: {{model.impactMedia}}</div>
+  <div class="columns small-4 medium-2 left">Mobile: {{model.impactMobile}}</div>
+  <div class="columns small-4 medium-2 left">Policy: {{model.impactPolicy}}</div>
+  <div class="columns small-4 medium-2 left">Retail: {{model.impactRetail}}</div>
+  <div class="columns small-4 medium-2 left">Robotics: {{model.impactRobotics}}</div>
+  <div class="columns small-4 medium-2 left">Sustainability: {{model.impactSustainability}}</div>
+  <div class="columns small-4 medium-2 left">Transportation: {{model.impactTransportation}}</div>
+  <div class="columns small-4 medium-2 left">Travel: {{model.impactTravel}}</div>
+  <div class="columns small-4 medium-2 left">Wellbeing: {{model.impactWellbeing}}</div>
+</div>
 <ul>
-  <li>Banking: {{model.impactBanking}}</li>
-  <li>Education: {{model.impactEducation}}</li>
-  <li>Entertainment: {{model.impactEntertainment}}</li>
-  <li>Food: {{model.impactFood}}</li>
-  <li>Housing: {{model.impactHousing}}</li>
-  <li>Media: {{model.impactMedia}}</li>
-  <li>Mobile: {{model.impactMobile}}</li>
-  <li>Policy: {{model.impactPolicy}}</li>
-  <li>Retail: {{model.impactRetail}}</li>
-  <li>Robotics: {{model.impactRobotics}}</li>
-  <li>Sustainability: {{model.impactSustainability}}</li>
-  <li>Transportation: {{model.impactTransportation}}</li>
-  <li>Travel: {{model.impactTravel}}</li>
-  <li>Wellbeing: {{model.impactWellbeing}}</li>
 </ul>
 <h4>Questions</h4>
-<ul>
-  {{#each model.questions as |question|}}
-    <li>{{question}}</li>
+<div class="row">
+  {{#each model.questions as |question index|}}
+    <div class="columns small-12 medium-6">Question {{index}}: {{question}}</div>
   {{/each}}
+</div>
+<ul>
 </ul>
