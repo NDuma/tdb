@@ -13,7 +13,8 @@ export default Ember.Controller.extend({
     get () {
       let model = this.get('model')
       let questions = _.values(getProperties(model, QUESTIONS))
-      return hmean(questions).toFixed(1)
+      let mean = hmean(questions)
+      return isNaN(mean) ? '' : mean.toFixed(1)
     }
   })
 })
