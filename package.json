@@ -1,6 +1,6 @@
 {
   "name": "techdb-admin",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "UI for admin of techDB",
   "private": true,
   "directories": {
