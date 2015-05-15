@@ -24,6 +24,7 @@
     "currentRouteName"
   ],
   "node": false,
+  "asi": true,
   "browser": false,
   "boss": true,
   "curly": false,
