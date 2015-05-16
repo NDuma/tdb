@@ -1,6 +1,6 @@
 # Techdb-admin
 
-Build status: [![Circle CI](https://circleci.com/gh/envisioning/techdb-admin/tree/master.svg?style=svg)](https://circleci.com/gh/envisioning/techdb-admin/tree/master)
+Build status: [![Build Status](https://travis-ci.org/envisioning/techdb-admin.svg?branch=master)](https://travis-ci.org/envisioning/techdb-admin)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
