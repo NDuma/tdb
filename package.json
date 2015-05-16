@@ -9,18 +9,17 @@
   },
   "scripts": {
     "build": "ember build",
-    "postinstall": "bower install",
     "start": "ember server",
     "test": "ember test"
   },
   "repository": "git@github.com:envisioning/techdb-admin.git",
   "engines": {
-    "node": "0.12.x"
+    "iojs": "2.0.x",
+    "npm": "2.9.x"
   },
   "author": "Luiz Sócrate <luiz@socrate.com.br>",
   "license": "MIT",
   "devDependencies": {
-    "bower": "^1.4.1",
     "broccoli-asset-rev": "^2.0.2",
     "broccoli-clean-css": "^1.0.0",
     "compute-hmean": "^1.0.0",
