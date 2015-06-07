@@ -5,30 +5,18 @@
       <label>Name: {{input value=model.name}}</label>
     </div>
   </div>
-  <h4>Summary</h4>
   <div class="row">
     <div class="columns small-12 medium-6">
       <label>
-        Markdown:
+        Summary. Markdown supported.
         {{textarea value=model.summary rows='3'}}
       </label>
     </div>
     <div class="columns small-12 medium-6">
-      <label>Display:</label>
-      {{markdown-to-html markdown=model.summary}}
-    </div>
-  </div>
-  <h4>Description</h4>
-  <div class="row">
-    <div class="columns small-12 medium-6">
       <label>
-        Markdown:
+        Description. Markdown supported.
         {{textarea value=model.description rows='9'}}
       </label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Display:</label>
-      {{markdown-to-html markdown=model.description}}
     </div>
   </div>
   <h4>Impact</h4>
