@@ -1,0 +1,25 @@
+<h3>Questions for readiness</h3>
+<table>
+  <thead>
+    <tr>
+      <th>-</th>
+      <th>Question</th>
+      <th>Levels</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |vector idx|}}
+        <tr>
+          <td>{{vector.position}}</td>
+          <td>{{vector.question}}</td>
+          <td>
+            {{#each vector.levels as |level|}}
+              {{level}}<br>
+            {{/each}}
+          </td>
+          <td></td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
