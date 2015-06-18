@@ -1,24 +1,24 @@
-<h3>Questions for readiness</h3>
+<h3>Questions for readiness
+{{#link-to 'readiness.edit' class="button tiny"}}Edit{{/link-to}}
+</h3>
 <table>
   <thead>
     <tr>
-      <th>-</th>
+      <th>#</th>
       <th>Question</th>
       <th>Levels</th>
-      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
-    {{#each model as |vector idx|}}
+    {{#each model as |vector|}}
         <tr>
           <td>{{vector.position}}</td>
           <td>{{vector.question}}</td>
           <td>
-            {{#each vector.levels as |level|}}
-              {{level}}<br>
+            {{#each vector.levels as |level idx|}}
+              {{human-index idx}}. {{level}}<br>
             {{/each}}
           </td>
-          <td></td>
         </tr>
     {{/each}}
   </tbody>
