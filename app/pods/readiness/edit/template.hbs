@@ -1,0 +1,18 @@
+<h3>Edit readiness questions</h3>
+<form {{action 'saveAll' model on='submit'}}>
+  {{#each model as |vector idx|}}
+    <div class="row">
+      <label class="columns small-12">
+        Question #{{human-index idx}}
+        {{input value=vector.question}}
+      </label>
+      {{#each vector.levels as |level levelIdx|}}
+        <label class="columns small-12 medium-6 large-4 left">
+          Level {{human-index levelIdx}}
+          {{input value=level}}
+        </label>
+      {{/each}}
+    </div>
+  {{/each}}
+  <button type='submit'>Save</button>
+</form>
