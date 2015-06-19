@@ -8,6 +8,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveAll (vectors) { vectors.invoke('save') }
+    saveAll (vectors) { vectors.filterBy('isDirty').invoke('save') },
+    refreshLevels (model) { model.transitionTo('loaded.updated.uncommitted') }
   }
 })
