@@ -1,0 +1,25 @@
+<h3>Questions for readiness
+{{#link-to 'readiness.edit' class="button tiny"}}Edit{{/link-to}}
+</h3>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Question</th>
+      <th>Levels</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |vector|}}
+        <tr>
+          <td>{{vector.position}}</td>
+          <td>{{vector.question}}</td>
+          <td>
+            {{#each vector.levels as |level|}}
+              {{level.value}}. {{level.description}}<br>
+            {{/each}}
+          </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

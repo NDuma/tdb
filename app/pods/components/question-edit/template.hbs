@@ -1,0 +1,11 @@
+<h1>{{level0}}</h1>
+<label class="columns small-12">
+  Question #{{human-index idx}}
+  {{input value=vector.question}}
+</label>
+{{#each vector.levels as |level|}}
+  <label class="columns small-12 medium-6 large-4 left">
+    Level {{level.value}}
+    {{input value=level.description}}
+  </label>
+{{/each}}

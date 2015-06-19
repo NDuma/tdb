@@ -13,4 +13,7 @@ export default Router.map(function() {
     this.route('edit', { path: ':tech_id/edit' })
     this.route('create')
   })
+  this.route('readiness', function() {
+    this.route('edit')
+  })
 })

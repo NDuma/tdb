@@ -1,0 +1,7 @@
+<h3>Edit readiness questions</h3>
+<form {{action 'saveAll' model on='submit'}}>
+  {{#each model as |vector index|}}
+    {{question-edit vector=vector index=index levels-changed='refreshLevels'}}
+  {{/each}}
+  <button type='submit'>Save</button>
+</form>
