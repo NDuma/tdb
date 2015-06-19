@@ -15,8 +15,8 @@
           <td>{{vector.position}}</td>
           <td>{{vector.question}}</td>
           <td>
-            {{#each vector.levels as |level idx|}}
-              {{human-index idx}}. {{level}}<br>
+            {{#each vector.levels as |level|}}
+              {{level.value}}. {{level.description}}<br>
             {{/each}}
           </td>
         </tr>
