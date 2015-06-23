@@ -1,0 +1,49 @@
+<h3>{{model.name}}</h3>
+<form {{action 'save' model on='submit'}}>
+  <div class="row">
+    <div class="columns small-12">
+      <label>Name: {{input value=model.name}}</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12 medium-6">
+      <label>
+        Summary. Markdown supported.
+        {{textarea value=model.summary rows='3'}}
+      </label>
+    </div>
+    <div class="columns small-12 medium-6">
+      <label> Image upload will be here soon...  </label>
+    </div>
+  </div>
+  <div class="row">
+    <label class="columns small-12 medium-6">
+      Website
+      {{input value=model.websiteUrl}}
+    </label>
+    <label class="columns small-12 medium-6">
+      Twitter URL
+      {{input value=model.twitterUrl}}
+    </label>
+    <label class="columns small-12 medium-6">
+      Crunchbase URL
+      {{input value=model.crunchbaseUrl}}
+    </label>
+    <label class="columns small-12 medium-6">
+      Angel URL
+      {{input value=model.angelUrl}}
+    </label>
+    <label class="columns small-12">
+      Technologies
+      {{ember-selectize
+        multiple=true
+        selection=model.technologies
+        content=technologies
+        sortField='name:asc'
+        optionValuePath='content.id'
+        optionLabelPath='content.name'
+      }}
+    </label>
+  </div>
+  <button type='submit'>Save</button>
+</form>

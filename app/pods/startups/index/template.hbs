@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Startup</th>
+      <th>Website</th>
+      <th>Twitter</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |startup|}}
+      <tr>
+        <td>{{#link-to 'startups.read' startup}}{{startup.name}}{{/link-to}}</td>
+        <td>{{startup.websiteUrl}}</td>
+        <td>{{startup.twitterUrl}}</td>
+        <td>
+          {{#link-to 'startups.edit' startup class="button tiny"}}Edit{{/link-to}}
+          <button class="tiny alert" {{action 'delete' startup}}>Delete</button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
