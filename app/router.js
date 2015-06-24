@@ -16,4 +16,9 @@ export default Router.map(function() {
   this.route('readiness', function() {
     this.route('edit')
   })
+  this.route('startups', function() {
+    this.route('create')
+    this.route('read', { path: ':startup_id'})
+    this.route('edit', { path: ':startup_id/edit'})
+  })
 })

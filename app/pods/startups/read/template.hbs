@@ -1,0 +1,25 @@
+<h3>{{model.name}}</h3>
+{{model.image}}
+<h4>Summary</h4>
+{{model.summary}}
+<h4>URLs</h4>
+<dl>
+  <dt>Website</dt>
+  <dd><a src=model.websiteUrl>{{model.websiteUrl}}</a></dd>
+  <dt>Twitter</dt>
+  <dd><a src=model.twitterUrl>{{model.twitterUrl}}</a></dd>
+  <dt>Crunchbase</dt>
+  <dd><a src=model.crunchbaseUrl>{{model.crunchbaseUrl}}</a></dd>
+  <dt>Angel</dt>
+  <dd><a src=model.angelUrl>{{model.angelUrl}}</a></dd>
+</dl>
+<h4>Technologies</h4>
+{{#if model.technologies}}
+  <ul>
+    {{#each model.technologies as |technology|}}
+      <li>{{#link-to 'technologies.read' technology}}{{technology.name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  None yet
+{{/if}}

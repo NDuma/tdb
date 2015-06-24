@@ -38,6 +38,7 @@ const Tech = DS.Model.extend({
   question8: number,
   question9: number,
   readiness: number,
+  startups: DS.hasMany('startup', { async: true }),
 
   questions: computed.apply(null, QUESTIONS.concat({
     get () {
