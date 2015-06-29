@@ -28,4 +28,4 @@ deploy:
     secure: HlDS3ewXebXFlUQTHwqpc+mv9qZTmGSd0VnogBSoP4ih5H86XpC6shBLDy9NBq1N9e2qV5va+NnoMLjpzTrNAk3HOPmQIJIgvKzq6nSFo2CqII3jk5+3DSQ87cNCz0OtnyDuo6banm072PWooht1S480+pnz3RLJANOMmq1Y0Xs=
   app: techdb-admin
   on:
-    repo: envisioning/techdb-admin
+    repo: envisioning/tdb
