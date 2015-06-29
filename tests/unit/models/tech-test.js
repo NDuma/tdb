@@ -5,7 +5,7 @@ import {
 
 moduleForModel('tech', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:startup']
 });
 
 test('it exists', function(assert) {
