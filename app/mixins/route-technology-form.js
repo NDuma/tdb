@@ -1,11 +1,20 @@
 import Ember from 'ember';
 
-const { get } = Ember
+const { get, set } = Ember
 const technologyForm = 'technologies.form'
 
 export default Ember.Mixin.create({
   templateName: technologyForm,
   controllerName: technologyForm,
+
+  setupController (controller, model) {
+    this._super(controller, model)
+    this.store.findAll('vector')
+      .then(function (vectors) {
+        let sortedVectors = vectors.sortBy('position')
+        set(controller, 'vectors', sortedVectors)
+      })
+  },
 
   deactivate () {
     let model = get(this, 'currentModel')
@@ -17,6 +26,12 @@ export default Ember.Mixin.create({
   actions: {
     save (model) {
       model.save().then(() => this.transitionTo('technologies'))
+    },
+    setQuestion (question, value) {
+      let model = get(this, 'currentModel')
+      let position = get(question, 'position')
+      let prop = `question${position}`
+      set(model, prop, value)
     }
   }
 });

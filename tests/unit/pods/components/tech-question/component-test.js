@@ -1,8 +1,8 @@
 import { moduleForComponent, test } from 'ember-qunit';
 
-moduleForComponent('question-edit', 'Unit | Component | question edit', {
+moduleForComponent('tech-question', 'Unit | Component | tech question', {
   // Specify the other units that are required for this test
-  needs: ['helper:human-index', 'helper:ember-selectize'],
+  // needs: ['component:foo', 'helper:bar'],
   unit: true
 });
 

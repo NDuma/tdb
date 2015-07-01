@@ -66,36 +66,13 @@
   </div>
   <h4>Readiness {{to-fixed 1 currentReadiness}}</h4>
   <div class="row">
-    <div class="columns small-12 medium-6">
-      <label>Question 1: {{input type='number' min='1' max='5' step='1' value=model.question0}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 2: {{input type='number' min='1' max='5' step='1' value=model.question1}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 3: {{input type='number' min='1' max='5' step='1' value=model.question2}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 4: {{input type='number' min='1' max='5' step='1' value=model.question3}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 5: {{input type='number' min='1' max='5' step='1' value=model.question4}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 6: {{input type='number' min='1' max='5' step='1' value=model.question5}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 7: {{input type='number' min='1' max='5' step='1' value=model.question6}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 8: {{input type='number' min='1' max='5' step='1' value=model.question7}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 9: {{input type='number' min='1' max='5' step='1' value=model.question8}}</label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>Question 10: {{input type='number' min='1' max='5' step='1' value=model.question9}}</label>
-    </div>
+    {{#each vectors as |vector|}}
+      {{tech-question vector=vector action='setQuestion'}}
+    {{else}}
+      <div class="columns small-12">
+        Loading readiness model...
+      </div>
+    {{/each}}
   </div>
   <button type='submit'>Save</button>
 </form>
