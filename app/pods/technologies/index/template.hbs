@@ -2,16 +2,12 @@
   <thead>
     <tr>
       <th>Technology</th>
-      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     {{#each model as |tech|}}
       <tr>
-        <td>{{#link-to 'technologies.read' tech.id}}{{tech.name}}{{/link-to}}</td>
-        <td>
-          {{#link-to 'technologies.edit' tech.id class="button tiny"}}Edit{{/link-to}}
-        </td>
+        <td>{{#link-to 'technologies.edit' tech}}{{tech.name}}{{/link-to}}</td>
       </tr>
     {{/each}}
   </tbody>
