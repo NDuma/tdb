@@ -1,0 +1,9 @@
+{{vector.question}}:
+{{ember-selectize
+  content=vector.levels
+  sortField='value'
+  sortDirection='asc'
+  optionValuePath='content.value'
+  optionLabelPath='content.description'
+  select-item='selects'
+}}
