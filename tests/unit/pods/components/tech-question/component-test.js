@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 
 moduleForComponent('tech-question', 'Unit | Component | tech question', {
   // Specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar'],
+  needs: ['component:ember-selectize'],
   unit: true
 });
 

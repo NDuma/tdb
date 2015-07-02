@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 
 moduleForComponent('question-edit', 'Unit | Component | question edit', {
   // Specify the other units that are required for this test
-  needs: ['helper:human-index', 'helper:ember-selectize'],
+  needs: ['helper:human-index', 'component:ember-selectize'],
   unit: true
 });
 
