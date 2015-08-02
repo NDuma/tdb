@@ -6,63 +6,70 @@
     </div>
   </div>
   <div class="row">
-    <div class="columns small-12 medium-6">
-      <label>
-        Summary.
-        {{textarea value=model.summary rows='3'}}
-      </label>
-    </div>
-    <div class="columns small-12 medium-6">
-      <label>
-        Description. Markdown supported.
-        {{textarea value=model.description rows='9'}}
-      </label>
-    </div>
+    <label class="columns small-12 medium-6">
+      Summary.
+      {{textarea value=model.summary rows='3'}}
+    </label>
+    <label class="columns small-12 medium-6">
+      Description. Markdown supported.
+      {{textarea value=model.description rows='9'}}
+    </label>
+    <label class="columns small-12">
+      Startups
+      {{ember-selectize
+        multiple=true
+        selection=model.startups
+        content=startups
+        sortField='name:asc'
+        optionValuePath='content.id'
+        optionLabelPath='content.name'
+      }}
+    </label>
   </div>
   <h4>Impact</h4>
   <div class="row">
-    <div class="columns small-4 medium-2 left">
-      <label>Banking: {{input type='number' min='1' max='5' step='1' value=model.impactBanking}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Education: {{input type='number' min='1' max='5' step='1' value=model.impactEducation}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Entertainment: {{input type='number' min='1' max='5' step='1' value=model.impactEntertainment}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Food: {{input type='number' min='1' max='5' step='1' value=model.impactFood}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Housing: {{input type='number' min='1' max='5' step='1' value=model.impactHousing}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Media: {{input type='number' min='1' max='5' step='1' value=model.impactMedia}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Mobile: {{input type='number' min='1' max='5' step='1' value=model.impactMobile}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Policy: {{input type='number' min='1' max='5' step='1' value=model.impactPolicy}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Retail: {{input type='number' min='1' max='5' step='1' value=model.impactRetail}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Robotics: {{input type='number' min='1' max='5' step='1' value=model.impactRobotics}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Sustainability: {{input type='number' min='1' max='5' step='1' value=model.impactSustainability}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Transportation: {{input type='number' min='1' max='5' step='1' value=model.impactTransportation}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Travel: {{input type='number' min='1' max='5' step='1' value=model.impactTravel}}</label>
-    </div>
-    <div class="columns small-4 medium-2 left">
-      <label>Wellbeing: {{input type='number' min='1' max='5' step='1' value=model.impactWellbeing}}</label>
-    </div>
+    <label class="columns small-4 medium-2 left">
+      Banking: {{input type='number' min='1' max='5' step='1' value=model.impactBanking}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Education: {{input type='number' min='1' max='5' step='1' value=model.impactEducation}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Entertainment: {{input type='number' min='1' max='5' step='1' value=model.impactEntertainment}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Food: {{input type='number' min='1' max='5' step='1' value=model.impactFood}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Housing: {{input type='number' min='1' max='5' step='1' value=model.impactHousing}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Media: {{input type='number' min='1' max='5' step='1' value=model.impactMedia}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Mobile: {{input type='number' min='1' max='5' step='1' value=model.impactMobile}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Policy: {{input type='number' min='1' max='5' step='1' value=model.impactPolicy}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Retail: {{input type='number' min='1' max='5' step='1' value=model.impactRetail}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Robotics: {{input type='number' min='1' max='5' step='1' value=model.impactRobotics}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Sustainability: {{input type='number' min='1' max='5' step='1' value=model.impactSustainability}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Transportation: {{input type='number' min='1' max='5' step='1' value=model.impactTransportation}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Travel: {{input type='number' min='1' max='5' step='1' value=model.impactTravel}}
+    </label>
+    <label class="columns small-4 medium-2 left">
+      Wellbeing: {{input type='number' min='1' max='5' step='1' value=model.impactWellbeing}}
+    </label>
   </div>
   <h4>Readiness {{to-fixed 1 currentReadiness}}</h4>
   <div class="row">
