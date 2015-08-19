@@ -52,9 +52,9 @@ const CustomAuthenticator = AuthenticatorBase.extend({
   }
 })
 
-export function initialize (container) {
-  container.register('authenticator:custom', CustomAuthenticator)
-  container.register('authorizer:custom', CustomAuthorizer)
+export function initialize (container, application) {
+  application.register('authenticator:custom', CustomAuthenticator)
+  application.register('authorizer:custom', CustomAuthorizer)
 }
 
 export default { name: 'authentication', before: 'simple-auth', initialize }
