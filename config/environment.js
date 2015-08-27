@@ -20,15 +20,10 @@ module.exports = function(environment) {
     },
 
     'simple-auth': {
-      authorizer: 'authorizer:custom',
-      crossOriginWhitelist: [
-        'http://techdb-api.herokuapp.com',
-        'http://techdb-api-staging.herokuapp.com',
-        'https://techdb-api.herokuapp.com',
-        'https://techdb-api-staging.herokuapp.com',
-        'http://localhost:3000',
-        'https://localhost:3000'
-      ]
+      base: {
+        authenticationRoute: 'signin',
+        store: 'session-store:local-storage'
+      }
     },
     contentSecurityPolicy: {
       'default-src': "'none'",

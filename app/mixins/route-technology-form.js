@@ -16,7 +16,7 @@ export default Ember.Mixin.create({
         set(controller, 'vectors', sortedVectors)
       })
 
-    set(controller, 'startups', this.store.all('startup'))
+    set(controller, 'startups', this.store.peekAll('startup'))
     this.store.findAll('startup')
   },
 

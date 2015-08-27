@@ -10,7 +10,7 @@ export default Ember.Mixin.create({
   setupController (controller, model) {
     this._super(controller, model)
 
-    set(controller, 'technologies', this.store.all('tech'))
+    set(controller, 'technologies', this.store.peekAll('tech'))
     this.store.findAll('tech')
   },
 

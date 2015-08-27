@@ -1,6 +1,14 @@
 import Ember from 'ember'
-import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin'
 
-export default Ember.Controller.extend(LoginControllerMixin, {
-  authenticator: 'authenticator:custom'
+const { get, getProperties } = Ember
+const { service } = Ember.inject
+
+export default Ember.Controller.extend({
+  session: service('session'),
+  actions: {
+    authenticate () {
+      let data = getProperties(this, 'identification', 'password')
+      get(this, 'session').authenticate('authenticator:bearer', data)
+    }
+  }
 })
