@@ -4,10 +4,10 @@ import Ember from 'ember'
 const { get, isEmpty } = Ember
 
 export default AuthorizerBase.extend({
-  authorize (jqXHR) {
-    let token = get(this, 'session.token')
+  authorize (block) {
+    let token = get(this, 'session.content.authenticated.token')
     if (get(this, 'session.isAuthenticated') && !isEmpty(token)) {
-      jqXHR.setRequestHeader('Authorization', `Bearer ${token}`)
+      block('Authorization', `Bearer ${token}`)
     }
   }
 })

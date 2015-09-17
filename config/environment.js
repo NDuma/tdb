@@ -19,7 +19,7 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    'simple-auth': {
+    'ember-simple-auth': {
       base: {
         authenticationRoute: 'signin',
         store: 'session-store:local-storage'
