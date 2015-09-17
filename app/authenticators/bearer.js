@@ -1,17 +1,7 @@
-import AuthenticatorBase from 'simple-auth/authenticators/base'
-import AuthorizerBase from 'simple-auth/authorizers/base'
+import AuthenticatorBase from 'ember-simple-auth/authenticators/base'
 import Ember from 'ember'
 
 const { RSVP, get, getProperties, isEmpty } = Ember
-
-const CustomAuthorizer = AuthorizerBase.extend({
-  authorize (jqXHR) {
-    let token = this.get('session.token')
-    if (this.get('session.isAuthenticated') && !isEmpty(token)) {
-      jqXHR.setRequestHeader('Authorization', `Bearer ${token}`)
-    }
-  }
-})
 
 function extractSessionData (res) {
   return {
@@ -21,7 +11,7 @@ function extractSessionData (res) {
   }
 }
 
-const CustomAuthenticator = AuthenticatorBase.extend({
+export default AuthenticatorBase.extend({
   restore (rawData) {
     let data = getProperties(rawData, ['userId', 'userEmail', 'token'])
     if (isEmpty(data.userId) || isEmpty(data.userEmail) || isEmpty(data.token)) {
@@ -51,10 +41,3 @@ const CustomAuthenticator = AuthenticatorBase.extend({
     return RSVP.resolve()
   }
 })
-
-export function initialize (container, application) {
-  application.register('authenticator:custom', CustomAuthenticator)
-  application.register('authorizer:custom', CustomAuthorizer)
-}
-
-export default { name: 'authentication', before: 'simple-auth', initialize }

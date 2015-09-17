@@ -1,36 +1,4 @@
-<div class="contain-to-grid">
-  <nav class="top-bar" role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1>{{#link-to 'index'}}TechDB Admin{{/link-to}}</h1>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        {{#if session.isAuthenticated}}
-          <li class="has-dropdown not-click">
-            {{#link-to 'technologies.index'}}Technologies{{/link-to}}
-            <ul class="dropdown">
-              <li>{{#link-to 'technologies.index'}}Index{{/link-to}}</li>
-              <li>{{#link-to 'technologies.create'}}Create{{/link-to}}</li>
-            </ul>
-          </li>
-          <li class="has-dropdown not-click">
-            {{#link-to 'startups.index'}}Startups{{/link-to}}
-            <ul class="dropdown">
-              <li>{{#link-to 'startups.index'}}Index{{/link-to}}</li>
-              <li>{{#link-to 'startups.create'}}Create{{/link-to}}</li>
-            </ul>
-          </li>
-          <li>{{#link-to 'readiness.index'}}Readiness{{/link-to}}</li>
-          <li><a {{ action 'invalidateSession' }}>Logout</a></li>
-        {{else}}
-          <li>{{#link-to 'signin'}}Sign in{{/link-to}}</li>
-        {{/if}}
-      </ul>
-    </section>
-  </nav>
-</div>
+{{main-navigation}}
 <div class="row">
   <div class="columns small-12">
     {{outlet}}

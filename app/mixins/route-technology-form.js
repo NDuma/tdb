@@ -9,11 +9,15 @@ export default Ember.Mixin.create({
 
   setupController (controller, model) {
     this._super(controller, model)
+
     this.store.findAll('vector')
       .then(function (vectors) {
         let sortedVectors = vectors.sortBy('position')
         set(controller, 'vectors', sortedVectors)
       })
+
+    set(controller, 'startups', this.store.peekAll('startup'))
+    this.store.findAll('startup')
   },
 
   deactivate () {

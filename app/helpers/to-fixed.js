@@ -6,4 +6,4 @@ export function toFixed(params) {
   return isNaN(number) ? '' : number.toFixed(digits)
 }
 
-export default Ember.HTMLBars.makeBoundHelper(toFixed);
+export default Ember.Helper.helper(toFixed)
