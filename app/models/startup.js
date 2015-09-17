@@ -11,5 +11,5 @@ export default DS.Model.extend({
   twitterUrl: string,
   crunchbaseUrl: string,
   angelUrl: string,
-  technologies: DS.hasMany('tech', { async: true })
+  techs: DS.hasMany('tech', { async: true })
 });
