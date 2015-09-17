@@ -14,9 +14,9 @@
   <dd><a src=model.angelUrl>{{model.angelUrl}}</a></dd>
 </dl>
 <h4>Technologies</h4>
-{{#if model.technologies}}
+{{#if model.techs}}
   <ul>
-    {{#each model.technologies as |technology|}}
+    {{#each model.techs as |technology|}}
       <li>{{#link-to 'technologies.read' technology}}{{technology.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
