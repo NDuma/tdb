@@ -18,6 +18,9 @@ export default Ember.Mixin.create({
 
     set(controller, 'startups', this.store.peekAll('startup'))
     this.store.findAll('startup')
+
+    set(controller, 'techs', this.store.peekAll('tech'))
+    this.store.findAll('tech')
   },
 
   deactivate () {

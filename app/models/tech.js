@@ -2,8 +2,9 @@ import DS from 'ember-data'
 import Ember from 'ember'
 
 const { A, computed, getProperties, setProperties } = Ember
-const string = DS.attr('string')
-const number = DS.attr('number')
+const { attr, hasMany } = DS
+const string = attr('string')
+const number = attr('number')
 const QUESTIONS = ['question0', 'question1', 'question2', 'question3',
   'question4', 'question5', 'question6', 'question7', 'question8', 'question9']
 
@@ -38,7 +39,8 @@ const Tech = DS.Model.extend({
   question8: number,
   question9: number,
   readiness: number,
-  startups: DS.hasMany('startup', { async: true }),
+  startups: hasMany('startup', { async: true }),
+  techs: hasMany('tech', { async: true }),
 
   questions: computed.apply(null, QUESTIONS.concat({
     get () {

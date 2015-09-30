@@ -25,6 +25,17 @@
         optionLabelPath='content.name'
       }}
     </label>
+    <label class="columns small-12">
+      Related technologies
+      {{ember-selectize
+        multiple=true
+        selection=model.techs
+        content=techs
+        sortField='name:asc'
+        optionValuePath='content.id'
+        optionLabelPath='content.name'
+      }}
+    </label>
   </div>
   <h4>Impact</h4>
   <div class="row">
