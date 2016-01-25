@@ -1,3 +1,7 @@
+# No Longer Maintained
+ - Please see:
+   https://github.com/envisioning/techdb
+
 # Techdb-admin
 
 Build status: [![Build Status](https://travis-ci.org/envisioning/tdb.svg?branch=master)](https://travis-ci.org/envisioning/tdb)
